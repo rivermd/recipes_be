@@ -1,6 +1,6 @@
 import pytest
-from app_api.models import Recipe
-from app_api import db, app
+from recipes_api.models import Recipe
+from recipes_api import db, app
 
 
 @pytest.fixture
@@ -15,4 +15,4 @@ def testing_client(scope='module'):
 
     db.drop_all()
     
-    #seeing if this works
+
