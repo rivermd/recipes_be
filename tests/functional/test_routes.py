@@ -24,7 +24,7 @@ def test_dummy_wrong_path():
         response = client.get('/wrong_path')
         assert response.status_code == 404
 
-def test_create_account(testing_client):
+def test_create_recipe(testing_client):
     """
     GIVEN a Flask application
     WHEN the '/recipe' page is posted to (POST)
