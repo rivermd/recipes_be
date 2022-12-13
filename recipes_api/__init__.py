@@ -22,8 +22,8 @@ else:
 
 db = SQLAlchemy(app)
 
-from app_api.models import Account
+from recipes_api.models import Account
 db.create_all()
 CORS(app)
 
-from app_api import routes
+from recipes_api import routes
