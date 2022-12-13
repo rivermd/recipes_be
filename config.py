@@ -8,7 +8,7 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URL = 'postgresql://{drivera-prod-db}:{11doctor}@{jseijas-pgsrv}/{drivera_prod_db}'.format(
+    SQLALCHEMY_DATABASE_URL = 'postgresql://{dbuser}:{dbpass}@{dbhost}/{dbname}'.format(
     dbuser=os.getenv('DBUSER'),
     dbpass=os.getenv('DBPASS'),
     dbhost=os.getenv('DBHOST'),
@@ -17,7 +17,7 @@ class ProductionConfig(Config):
     )
 
 class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URL = 'postgresql://{drivera-dev-db}:{11doctor}@{jseijas-pgsrv}/{drivera_dev_db}'.format(
+    SQLALCHEMY_DATABASE_URL = 'postgresql://{dbuser}:{dbpass}@{dbhost}/{dbname}'.format(
     dbuser=os.getenv('DBUSER'),
     dbpass=os.getenv('DBPASS'),
     dbhost=os.getenv('DBHOST'),
