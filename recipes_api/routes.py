@@ -1,6 +1,6 @@
 from flask import Flask, request
-from app_api import db, app
-from app_api.models import Recipe
+from recipes_api import db, app
+from recipes_api.models import Recipe
 
 
 @app.route('/')
