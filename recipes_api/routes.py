@@ -57,5 +57,5 @@ def format_recipe(recipe):
         'ingredients': recipe.ingredients,
         'steps': recipe.steps,
         'favorite': recipe.favorite,
-        'created_at': recipe.created_at
+        #'created_at': recipe.created_at
     }
