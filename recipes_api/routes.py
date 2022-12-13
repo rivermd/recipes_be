@@ -11,7 +11,7 @@ def hello_world():
 def skull():
     return 'Hi! This is the BACKEND SKULL! 💀'
 
-@app.routes('/recipes', methods=['POST'])
+@app.route('/recipes', methods=['POST'])
 def create_recipe():
     name = request.json['name']
     rating = request.json['rating']
@@ -23,17 +23,17 @@ def create_recipe():
     db.session.commit()
     return format_recipe(recipe)
 
-@app.routes('/recipes', methods=['GET'])
+@app.route('/recipes', methods=['GET'])
 def get_recipes():
     recipes = Recipe.query.all()
     return {'recipes': [format_recipe(recipe) for recipe in recipes]}
 
-@app.routes('/recipes/<int:id>', methods=['GET'])
+@app.route('/recipes/<int:id>', methods=['GET'])
 def get_recipe(id):
     recipe = Recipe.query.get(id)
     return format_recipe(recipe)
 
-@app.routes('/recipes/<int:id>', methods=['PUT'])
+@app.route('/recipes/<int:id>', methods=['PUT'])
 def update_recipe(id):
     recipe = Recipe.query.get(id)
     recipe.name = request.json['name']
@@ -42,7 +42,7 @@ def update_recipe(id):
     db.session.commit()
     return format_recipe(recipe)
 
-@app.routes('/recipes/<int:id>', methods=['DELETE'])
+@app.route('/recipes/<int:id>', methods=['DELETE'])
 def delete_recipe(id):
     recipe = Recipe.query.get(id)
     db.session.delete(recipe)
