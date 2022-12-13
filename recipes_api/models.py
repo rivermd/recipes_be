@@ -1,4 +1,4 @@
-from app_api import db
+from recipes_api import db
 from datetime import datetime
 import string, random
 
