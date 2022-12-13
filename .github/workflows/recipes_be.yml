@@ -72,5 +72,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       id: deploy-to-webapp
       with:
-        app-name: 'drivera-recipes-be'
+        app-name: 'drivera-app-dev'
         slot-name: 'Production'
