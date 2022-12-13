@@ -1,7 +1,7 @@
 from recipes_api import app
 from flask import Flask
 import pytest
-from conftests import testing_client
+from tests.conftests import testing_client
 
 app = Flask(__name__)
 
